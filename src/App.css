@@ -1,0 +1,148 @@
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  border-radius: 20px;
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid black;
+  overflow: hidden;
+}
+.add{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  width: 90%;
+}
+.add form{
+  display: flex;
+  margin-bottom: 50px;
+}
+.add input{
+  width: 80%;
+  height: 5vh;
+  border-radius: 10px;
+  text-align: center;
+  font-size: larger;
+  border: 3px solid orange;
+  background-color: white;
+}
+/* inputa tiklandiğinda cerceve olusmasin */
+.add input:focus{
+  outline: none;
+}
+.add input::placeholder{
+  text-align: center;
+  font-size: larger;
+  color: gray;
+}
+.add button{
+  background-color: 	white;
+  border: 3px solid 	lime;
+  color: lime;
+  border-radius: 5px;
+  padding: 8px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+.add button:hover{
+  color: white;
+  background-color: #00FF00;
+}
+.cizgi{
+  width: 90%;
+  margin-bottom: -10px;
+}
+.tablo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0 20px 0;
+  width: 90%;
+}
+.row{
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.cizgi2{
+  width: 100%;
+}
+.butonlar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.edit, .delete{
+  background: none;
+  cursor: pointer;
+}
+.edit{
+  color: 	#4FC3F7;
+  border: 1px solid 	#4FC3F7;
+  padding: 10px;
+  border-radius: 5px;
+}
+.edit:hover{
+  color: #007fba;
+  border: 1px solid #007fba;
+}
+.delete{
+  color: red;
+  border: 1px solid 	red;
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+.delete:hover{
+  color: rgb(196, 0, 0);
+  border: 1px solid rgb(196, 0, 0);
+}
+.editInput{
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  width: 60%;
+}
+.editInput:focus{
+  outline: 2px solid gray;
+}
+.editKaydet,.editIptal{
+  background-color: white;
+  border: 1px solid #FF1744;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #FF1744;
+  box-sizing: border-box;
+  margin-left: 5px;
+}
+
+.editKaydet:hover,.editIptal:hover{
+  border: 1px solid #99001f;
+  color: #9d001f;
+}
+
+@media screen and (max-width : 650px){
+  .App{
+    width: 90%;
+  }
+  .add input::placeholder{
+    font-size: medium;
+  }
+  .tablo{
+    flex-direction: column;
+  }
+  .editInput{
+    margin-bottom: 20px;
+  }
+}
