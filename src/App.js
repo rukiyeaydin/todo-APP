@@ -62,10 +62,13 @@ function App() {
         <div className="tablo">{Items.map(item => (
           <>
           <div key = {item.id} className='row'>
-            <form>{editingItemId === item.id ? (<input type="text" className='editInput' value={editedValue} onChange={e => setEditedValue(e.target.value)} />) : (item.value)}</form>
+            <form>{editingItemId === item.id ? (<input type="text" className='editInput' value={editedValue} 
+            onChange={e => setEditedValue(e.target.value)} />) : (item.value)}</form>
             <div className="butonlar">
-              <div>{editingItemId === item.id ? (<button className='editKaydet' onClick={saveItem}>Kaydet</button>) : (<button className='edit' onClick={() => editItem(item.id)}><i className="fa-solid fa-pen-to-square"></i></button>)}</div>
-              <div>{editingItemId === item.id ? (<button className='editIptal' onClick={cancelEdit}>İptal</button>) : (<button className='delete' onClick={() => removeItem(item.id)}><i className="fa-solid fa-trash"></i></button>)}</div>
+              <div>{editingItemId === item.id ? (<button className='editKaydet' onClick={saveItem}>Kaydet</button>) : 
+              (<button className='edit' onClick={() => editItem(item.id)}><i className="fa-solid fa-pen-to-square"></i></button>)}</div>
+              <div>{editingItemId === item.id ? (<button className='editIptal' onClick={cancelEdit}>İptal</button>) : 
+              (<button className='delete' onClick={() => removeItem(item.id)}><i className="fa-solid fa-trash"></i></button>)}</div>
             </div>
           </div>
           <hr className='cizgi2'/>
