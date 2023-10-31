@@ -14,16 +14,18 @@ function App() {
     {
       alert("Lütfen görev girin.");
     }
-
-    const item = {
-      id: Math.floor(Math.random() * 1000),
-      value : newItem
+    else{
+      const item = {
+        id: Math.floor(Math.random() * 1000),
+        value : newItem
+      }
+      setItems((oldList) => [...oldList, item]); // [...oldList, item] ifadesi, 
+      // spread operatörü (...) kullanılarak oldList dizisinin tüm öğelerini kopyalar ve
+      // ardından 'item' değişkenini listenin sonuna ekleyip yeni bir liste oluşturur.
+      // Yani inputa girdiğimiz 'item' ögesi yapılacaklar listesine eklenir.
+      setNewItem('');
     }
-    setItems((oldList) => [...oldList, item]); // [...oldList, item] ifadesi, 
-    // spread operatörü (...) kullanılarak oldList dizisinin tüm öğelerini kopyalar ve
-    // ardından 'item' değişkenini listenin sonuna ekleyip yeni bir liste oluşturur.
-    // Yani inputa girdiğimiz 'item' ögesi yapılacaklar listesine eklenir.
-    setNewItem('');
+
   }
 
   function editItem(itemId) {
